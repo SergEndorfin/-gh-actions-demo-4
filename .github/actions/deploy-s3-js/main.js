@@ -10,7 +10,7 @@ function run() {
 
     //upload files
     const s3Uri = `s3://${bucketName}`;
-    exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion} --server-side-encryption aws:kms`);
+    exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion} --sse aws:kms`);
     core.notice('========');
 }
 
