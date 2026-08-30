@@ -19984,7 +19984,7 @@ function run() {
   const bucketName = getInput("bucket-name", { required: true });
   const bucketRegion = getInput("bucket-region", { required: true });
   const distFolder = getInput("dist-folder", { required: true });
-  const s3Uri = `s3;//${bucketName}`;
+  const s3Uri = `s3://${bucketName}`;
   exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
   notice("========");
 }
