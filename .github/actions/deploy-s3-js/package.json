@@ -5,11 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild main.js --bundle --platform=node --target=node24 --outfile=dist/index.mjs --format=esm"
+    "build": "esbuild main.js --bundle --platform=node --target=node24 --outfile=dist/index.js --format=cjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "@actions/core": "^3.0.1",
@@ -17,7 +14,6 @@
     "@actions/github": "^9.1.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.45.0",
     "esbuild": "^0.28.2"
   }
 }
